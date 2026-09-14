@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 
-int Lower_Bound( vector<int> & nums , int x) {   // nums[index] >= x ---> Lower bound  ceil of a number is a same 
+int Floor_of_Number( vector<int> & nums , int x) {   
 
     int n= nums.size();
     int low =0;
@@ -13,12 +13,12 @@ int Lower_Bound( vector<int> & nums , int x) {   // nums[index] >= x ---> Lower 
 
         int mid = low + (high-low)/2;
 
-        if( nums[mid] >= x) {
-            ans = mid;
-            high = mid-1;
+        if( nums[mid] <=x) {
+            ans = nums[mid];
+            low = mid+1;
         }
         else {
-            low = mid+1;
+            high = mid-1;
         }
     }
 
@@ -35,5 +35,5 @@ int main() {
         cin >> nums[i];
     }
 
-    cout<< Lower_Bound( nums, target);
+    cout<< Floor_of_Number( nums, target);
 }

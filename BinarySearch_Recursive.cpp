@@ -10,7 +10,7 @@
     int mid = low + (high-low)/2;
 
     if( nums[mid]==target) return mid;
-
+ 
     else if( nums[mid] > target) return BS(nums, low, mid-1, target);
 
     else return BS(nums, mid+1, high, target);

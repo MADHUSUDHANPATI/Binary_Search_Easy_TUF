@@ -23,6 +23,7 @@ int Lower_Bound( vector<int> & nums , int x) {   // nums[index] >= x ---> Lower 
     }
 
     return ans;
+    // return lower_bound(nums.begin(), nums.end(), x) - nums.begin();
 
 }
 int main() {

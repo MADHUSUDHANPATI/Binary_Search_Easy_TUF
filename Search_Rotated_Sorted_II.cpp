@@ -14,7 +14,7 @@ int Search_Sorted( vector<int> &nums, int target) {
 
         if(nums[low]==nums[mid] && nums[mid]==nums[high]) {
             low++;
-            high--;
+            high--; 
             continue;
         }
         if( nums[low] <= nums[mid]){
